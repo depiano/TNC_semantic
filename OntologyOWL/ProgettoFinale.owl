@@ -1,0 +1,1100 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#"
+     xml:base="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_acquistato -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_acquistato">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_affittato -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_affittato">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:comment>Una persona ha affittato un immobile.
+Un&apos;agenzia ha affittato un&apos;immobile.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_preso_in_fitto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_preso_in_fitto">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_affittato"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdfs:comment>Una persona ha affittato un immobile.
+Un&apos;agenzia ha affittato un&apos;immobile.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_proposto_in_fitto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_proposto_in_fitto">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_affittato"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Agenzia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_proposto_in_vendita -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_proposto_in_vendita">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Agenzia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_proprietà -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_proprietà"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_venduto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_venduto">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#è_acquistato"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdfs:comment>Una persona ha venduto un immobile.
+Un&apos;agenzia ha venduto un immobile.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#è_acquistato -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#è_acquistato">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#è_posseduto"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <rdfs:comment>Un immobile è acquistato da una persona/privato.
+
+Equivalente a =&gt; Un immobile è posseduto da una persona/privato.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#è_posseduto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#è_posseduto">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_proprietà"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <rdfs:comment>un immobile è posseduto da una persona</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#è_proposto_in_fitto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#è_proposto_in_fitto">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_affittato"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Agenzia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <rdfs:comment>Un immobile è proposto in fitto da un&apos;agenzia
+Un immobile è proposto in fitto da una persona/privato</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#è_proposto_in_vendita -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#è_proposto_in_vendita">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Agenzia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <rdfs:comment>Un immobile è proposto in vendita da un&apos;agenzia.
+Un immobile è proposto in vendita da una persona.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#è_proprietario -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#è_proprietario">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_proprietà"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdfs:comment>una persona è proprietario di un immobile</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ANNO_DI_COSTRUZIONE -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ANNO_DI_COSTRUZIONE">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DETTAGLIO_IMMOBILE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ARREDAMENTO -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ARREDAMENTO">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DETTAGLIO_IMMOBILE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Appartamento"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Casa_indipendente"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Locale_Commerciale"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Monolocale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#CF -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#CF">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#INFORMAZIONI_PERSONALI"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#CIVICO -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#CIVICO">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DETTAGLIO_IMMOBILE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#CLASSE_ENERGETICA -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#CLASSE_ENERGETICA">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DETTAGLIO_IMMOBILE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#CODISTAT -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#CODISTAT">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DETTAGLIO_IMMOBILE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#COGNOME -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#COGNOME">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#INFORMAZIONI_PERSONALI"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Agenzia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DENOMINAZIONE -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DENOMINAZIONE">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DETTAGLIO_IMMOBILE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DESCRIZIONE -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DESCRIZIONE">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DETTAGLIO_IMMOBILE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DETTAGLIO_IMMOBILE -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DETTAGLIO_IMMOBILE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DUG -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DUG">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DETTAGLIO_IMMOBILE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#EMAIL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#EMAIL">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#INFORMAZIONI_PERSONALI"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Agenzia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ESPONENTE -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ESPONENTE">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DETTAGLIO_IMMOBILE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#GIARDINO -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#GIARDINO">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DETTAGLIO_IMMOBILE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Casa_indipendente"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Garage"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Locale_Commerciale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#INDIRIZZO -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#INDIRIZZO">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#INFORMAZIONI_PERSONALI"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Agenzia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#INFORMAZIONI_AGENZIA -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#INFORMAZIONI_AGENZIA">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#INFORMAZIONI_PERSONALI -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#INFORMAZIONI_PERSONALI">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#LATITUDINE -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#LATITUDINE">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DETTAGLIO_IMMOBILE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#LONGITUDINE -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#LONGITUDINE">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DETTAGLIO_IMMOBILE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#METRI_QUADRATI -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#METRI_QUADRATI">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DETTAGLIO_IMMOBILE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#NOME -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#NOME">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#INFORMAZIONI_PERSONALI"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Agenzia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#NOMECOMUNE -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#NOMECOMUNE">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DETTAGLIO_IMMOBILE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#N_BAGNI -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#N_BAGNI">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DETTAGLIO_IMMOBILE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#N_LIVELLI -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#N_LIVELLI">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DETTAGLIO_IMMOBILE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Casa_indipendente"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Locale_Commerciale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#N_VANI -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#N_VANI">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DETTAGLIO_IMMOBILE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#PIANO -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#PIANO">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DETTAGLIO_IMMOBILE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Appartamento"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Locale_Commerciale"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Monolocale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#POSTO_AUTO -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#POSTO_AUTO">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DETTAGLIO_IMMOBILE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Appartamento"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Casa_indipendente"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Locale_Commerciale"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Monolocale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#PREZZO -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#PREZZO">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#DETTAGLIO_IMMOBILE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#P_IVA -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#P_IVA">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#INFORMAZIONI_AGENZIA"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Agenzia"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#RAGIONE_SOCIALE -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#RAGIONE_SOCIALE">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#INFORMAZIONI_AGENZIA"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Agenzia"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#TELEFONO -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#TELEFONO">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#INFORMAZIONI_PERSONALI"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Agenzia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Acquirente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Acquirente">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Agenzia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colui che acquista un immobile.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Agenzia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Agenzia">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_proposto_in_fitto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_proposto_in_vendita"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Locatario"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Locatore"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Proprietario"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Venditore"/>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#P_IVA"/>
+        </owl:hasKey>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agenzia immobiliare, un&apos; impresa che svolge attività di mediazione nella compravendita o locazione (affitto) di immobili.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Appartamento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Appartamento">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#LATITUDINE"/>
+        </owl:hasKey>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#LONGITUDINE"/>
+        </owl:hasKey>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Immobile classificato come appartamento.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Casa_indipendente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Casa_indipendente">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#LATITUDINE"/>
+        </owl:hasKey>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#LONGITUDINE"/>
+        </owl:hasKey>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Immobile indipendente.
+Tipologia di case indipendenti: ville, case di campagna, abitazioni singole ecc..</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Garage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Garage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#LATITUDINE"/>
+        </owl:hasKey>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#LONGITUDINE"/>
+        </owl:hasKey>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Immobile classificato come garage.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#è_acquistato"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#è_posseduto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#è_proposto_in_fitto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Agenzia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#è_proposto_in_fitto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#è_proposto_in_vendita"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#LATITUDINE"/>
+        </owl:hasKey>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#LONGITUDINE"/>
+        </owl:hasKey>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E&apos; una struttura presente sul territorio.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Locale_Commerciale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Locale_Commerciale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#LATITUDINE"/>
+        </owl:hasKey>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#LONGITUDINE"/>
+        </owl:hasKey>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Immobile classificato come locale adibito al commercio.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Locatario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Locatario">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colui che prende in fitto un immobile.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Locatore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Locatore">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colui che concede in fitto un immobile.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Monolocale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Monolocale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#LATITUDINE"/>
+        </owl:hasKey>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#LONGITUDINE"/>
+        </owl:hasKey>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un monolocale è un appartamento, solitamente di modeste dimensioni, costituito da una singola stanza adibita a cucina, soggiorno e camera da letto, e da un servizio igienico.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_acquistato"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_preso_in_fitto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_proposto_in_fitto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_proposto_in_vendita"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#ha_venduto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#è_proprietario"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uno specifico individuo.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Proprietario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Proprietario">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colui che possiede l&apos;immobile.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Venditore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Venditore">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Persona"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colui che vende uno o più immobili.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Appartamento_centro_Storico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Appartamento_centro_Storico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Appartamento"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <è_posseduto rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Roberto_Colombo"/>
+        <è_proposto_in_fitto rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Roberto_Colombo"/>
+        <è_proposto_in_fitto rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#re_casa"/>
+        <ANNO_DI_COSTRUZIONE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2000</ANNO_DI_COSTRUZIONE>
+        <ARREDAMENTO rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ARREDAMENTO>
+        <CIVICO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">180</CIVICO>
+        <CLASSE_ENERGETICA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E</CLASSE_ENERGETICA>
+        <CODISTAT rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12345</CODISTAT>
+        <DENOMINAZIONE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amendola</DENOMINAZIONE>
+        <DESCRIZIONE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ahahohhxsohOQHXQ</DESCRIZIONE>
+        <DUG rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PIAZZA</DUG>
+        <ESPONENTE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NON_DISPONIBILE</ESPONENTE>
+        <GIARDINO rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</GIARDINO>
+        <LATITUDINE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">123456789</LATITUDINE>
+        <LONGITUDINE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12345678</LONGITUDINE>
+        <METRI_QUADRATI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">90</METRI_QUADRATI>
+        <NOMECOMUNE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FISCIANO</NOMECOMUNE>
+        <N_BAGNI rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</N_BAGNI>
+        <N_LIVELLI rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</N_LIVELLI>
+        <N_VANI rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</N_VANI>
+        <PIANO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SESTO</PIANO>
+        <POSTO_AUTO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NON_DISPONIBILE</POSTO_AUTO>
+        <PREZZO rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1200000.0</PREZZO>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Emilio_Arvonio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Emilio_Arvonio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Acquirente"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Proprietario"/>
+        <ha_acquistato rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Negozio_generi_alimentari"/>
+        <è_proprietario rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Negozio_generi_alimentari"/>
+        <CF rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EML262NSHS7SJSK123</CF>
+        <COGNOME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arvonio</COGNOME>
+        <EMAIL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EmilioA@gmail.com</EMAIL>
+        <INDIRIZZO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VIA BOSCOFANFONE 13</INDIRIZZO>
+        <NOME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emilio</NOME>
+        <TELEFONO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3570092123</TELEFONO>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Garage_due_posti_auto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Garage_due_posti_auto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Garage"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <è_posseduto rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Mario_Rossi"/>
+        <è_proposto_in_vendita rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Mario_Rossi"/>
+        <è_proposto_in_vendita rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#TECNOCASA_00"/>
+        <ANNO_DI_COSTRUZIONE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2015</ANNO_DI_COSTRUZIONE>
+        <ARREDAMENTO rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ARREDAMENTO>
+        <CIVICO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">65</CIVICO>
+        <CLASSE_ENERGETICA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B</CLASSE_ENERGETICA>
+        <CODISTAT rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12345</CODISTAT>
+        <DENOMINAZIONE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STARZA</DENOMINAZIONE>
+        <DESCRIZIONE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dmed edjdpwjd</DESCRIZIONE>
+        <DUG rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VIA</DUG>
+        <ESPONENTE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NON_DISPONIBILE</ESPONENTE>
+        <GIARDINO rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</GIARDINO>
+        <LATITUDINE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">123465431234</LATITUDINE>
+        <LONGITUDINE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12345654345</LONGITUDINE>
+        <METRI_QUADRATI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20</METRI_QUADRATI>
+        <NOMECOMUNE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FISCIANO</NOMECOMUNE>
+        <N_BAGNI rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</N_BAGNI>
+        <N_LIVELLI rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</N_LIVELLI>
+        <N_VANI rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</N_VANI>
+        <PIANO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PIANO TERRA</PIANO>
+        <POSTO_AUTO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DISPONIBILE</POSTO_AUTO>
+        <PREZZO rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10000.0</PREZZO>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Garage_posto_singolo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Garage_posto_singolo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Garage"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <è_posseduto rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Roberto_Colombo"/>
+        <ANNO_DI_COSTRUZIONE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2016</ANNO_DI_COSTRUZIONE>
+        <ARREDAMENTO rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ARREDAMENTO>
+        <CIVICO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">92</CIVICO>
+        <CLASSE_ENERGETICA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C</CLASSE_ENERGETICA>
+        <CODISTAT rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12345</CODISTAT>
+        <DENOMINAZIONE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BIVIO_ROSTO</DENOMINAZIONE>
+        <DESCRIZIONE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BJBALQXBAX LBXABXABX</DESCRIZIONE>
+        <DUG rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VIA</DUG>
+        <ESPONENTE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NON_DISPONIBILE</ESPONENTE>
+        <GIARDINO rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</GIARDINO>
+        <LATITUDINE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12345678765</LATITUDINE>
+        <LONGITUDINE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23456789871</LONGITUDINE>
+        <METRI_QUADRATI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">56</METRI_QUADRATI>
+        <NOMECOMUNE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FISCIANO</NOMECOMUNE>
+        <N_BAGNI rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</N_BAGNI>
+        <N_LIVELLI rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</N_LIVELLI>
+        <N_VANI rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</N_VANI>
+        <PIANO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TERRA</PIANO>
+        <POSTO_AUTO>DISPONIBILE</POSTO_AUTO>
+        <PREZZO rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10000.0</PREZZO>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Luca_Senatore -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Luca_Senatore">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Locatario"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Proprietario"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Venditore"/>
+        <ha_preso_in_fitto rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Appartamento_centro_Storico"/>
+        <ha_venduto rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Garage_posto_singolo"/>
+        <CF rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LCSE91DAS628NA</CF>
+        <COGNOME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Senatore</COGNOME>
+        <EMAIL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LucaSenatore@gmail.com</EMAIL>
+        <INDIRIZZO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VIA Andrea Pascarelli 37</INDIRIZZO>
+        <NOME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luca</NOME>
+        <TELEFONO rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3859021456</TELEFONO>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Mario_Rossi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Mario_Rossi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Proprietario"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Venditore"/>
+        <ha_proposto_in_vendita rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Garage_due_posti_auto"/>
+        <è_proprietario rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Garage_due_posti_auto"/>
+        <è_proprietario rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Villa_2_piani"/>
+        <CF rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MARO239HSN834</CF>
+        <COGNOME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rossi</COGNOME>
+        <EMAIL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mario.Rossi@gmail.com</EMAIL>
+        <INDIRIZZO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">via della libertà 15</INDIRIZZO>
+        <NOME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mario</NOME>
+        <TELEFONO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3456273123</TELEFONO>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Monolocale_periferia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Monolocale_periferia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Monolocale"/>
+        <è_posseduto rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Roberto_Colombo"/>
+        <è_proposto_in_fitto rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#tecnocasa"/>
+        <ANNO_DI_COSTRUZIONE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2007</ANNO_DI_COSTRUZIONE>
+        <ARREDAMENTO rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ARREDAMENTO>
+        <CIVICO rdf:datatype="http://www.w3.org/2001/XMLSchema#int">39</CIVICO>
+        <CLASSE_ENERGETICA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B</CLASSE_ENERGETICA>
+        <CODISTAT rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12345</CODISTAT>
+        <DENOMINAZIONE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iroma</DENOMINAZIONE>
+        <DESCRIZIONE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dnwòdqdòd</DESCRIZIONE>
+        <DUG rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VIA</DUG>
+        <ESPONENTE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NON_DISPONIBILE</ESPONENTE>
+        <GIARDINO rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</GIARDINO>
+        <LATITUDINE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12345678</LATITUDINE>
+        <LONGITUDINE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1234567</LONGITUDINE>
+        <METRI_QUADRATI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">73</METRI_QUADRATI>
+        <NOMECOMUNE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FISCIANO</NOMECOMUNE>
+        <N_BAGNI rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</N_BAGNI>
+        <N_LIVELLI rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</N_LIVELLI>
+        <N_VANI rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</N_VANI>
+        <PIANO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TERRA</PIANO>
+        <POSTO_AUTO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NON_DISPONIBILE</POSTO_AUTO>
+        <PREZZO rdf:datatype="http://www.w3.org/2001/XMLSchema#double">50000.0</PREZZO>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Negozio_generi_alimentari -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Negozio_generi_alimentari">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Locale_Commerciale"/>
+        <è_acquistato rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Emilio_Arvonio"/>
+        <è_posseduto rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Emilio_Arvonio"/>
+        <ANNO_DI_COSTRUZIONE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</ANNO_DI_COSTRUZIONE>
+        <ARREDAMENTO rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ARREDAMENTO>
+        <CIVICO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">33</CIVICO>
+        <CLASSE_ENERGETICA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E</CLASSE_ENERGETICA>
+        <CODISTAT rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12345</CODISTAT>
+        <DENOMINAZIONE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAN GIOVANNI</DENOMINAZIONE>
+        <DESCRIZIONE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AKGOUHAOHAHOA</DESCRIZIONE>
+        <DUG rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VIA</DUG>
+        <ESPONENTE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NON_DISPONIBILE</ESPONENTE>
+        <GIARDINO rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</GIARDINO>
+        <LATITUDINE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12345678987</LATITUDINE>
+        <LONGITUDINE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12345678765</LONGITUDINE>
+        <METRI_QUADRATI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">90</METRI_QUADRATI>
+        <NOMECOMUNE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FISCIANO</NOMECOMUNE>
+        <N_BAGNI rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</N_BAGNI>
+        <N_LIVELLI rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</N_LIVELLI>
+        <N_VANI rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</N_VANI>
+        <PIANO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PIANO TERRA</PIANO>
+        <POSTO_AUTO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DISPONIBILE</POSTO_AUTO>
+        <PREZZO rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1300000.0</PREZZO>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Roberto_Colombo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Roberto_Colombo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Locatore"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Proprietario"/>
+        <ha_proposto_in_fitto rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Appartamento_centro_Storico"/>
+        <è_proprietario rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Appartamento_centro_Storico"/>
+        <è_proprietario rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Garage_posto_singolo"/>
+        <CF rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RBCOL3672BSKS82</CF>
+        <COGNOME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colombo</COGNOME>
+        <EMAIL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roberto.colombo@gmail.com</EMAIL>
+        <INDIRIZZO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">via della pace 17</INDIRIZZO>
+        <NOME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roberto</NOME>
+        <TELEFONO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3467213247</TELEFONO>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#TECNOCASA_00 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#TECNOCASA_00">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Agenzia"/>
+        <ha_proposto_in_vendita rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Garage_due_posti_auto"/>
+        <EMAIL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antonio@tecnocasa.com</EMAIL>
+        <INDIRIZZO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VIA FRATTA 22 SOLOFRA (AV) 83029</INDIRIZZO>
+        <P_IVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">000000000000</P_IVA>
+        <RAGIONE_SOCIALE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TECNOCASA 00 di Antonio De Piano srl</RAGIONE_SOCIALE>
+        <TELEFONO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3463316586</TELEFONO>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#TECNOCASA_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#TECNOCASA_01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Agenzia"/>
+        <EMAIL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tecnocas@gmail.com</EMAIL>
+        <INDIRIZZO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VIA ROMA 22 SOLOFRA (AV) 83029</INDIRIZZO>
+        <P_IVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4444444444</P_IVA>
+        <RAGIONE_SOCIALE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TECNOCASA di Bevilacqua Vincenzo srl</RAGIONE_SOCIALE>
+        <TELEFONO rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3392845771</TELEFONO>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Villa_2_piani -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Villa_2_piani">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Casa_indipendente"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Immobile"/>
+        <è_posseduto rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Mario_Rossi"/>
+        <è_proposto_in_vendita rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#re_casa"/>
+        <ARREDAMENTO rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ARREDAMENTO>
+        <CIVICO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34</CIVICO>
+        <CLASSE_ENERGETICA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E</CLASSE_ENERGETICA>
+        <CODISTAT rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12345</CODISTAT>
+        <DENOMINAZIONE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pace</DENOMINAZIONE>
+        <DESCRIZIONE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ajajajaja</DESCRIZIONE>
+        <DUG rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VIA</DUG>
+        <ESPONENTE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NON_DISPONIBILE</ESPONENTE>
+        <GIARDINO rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</GIARDINO>
+        <LATITUDINE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">000000000000000</LATITUDINE>
+        <LONGITUDINE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0000000000001</LONGITUDINE>
+        <METRI_QUADRATI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">90</METRI_QUADRATI>
+        <NOMECOMUNE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FISCIANO</NOMECOMUNE>
+        <N_BAGNI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</N_BAGNI>
+        <N_LIVELLI rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</N_LIVELLI>
+        <N_VANI rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</N_VANI>
+        <PIANO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TERRA</PIANO>
+        <POSTO_AUTO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DISPONIBILE</POSTO_AUTO>
+        <PREZZO rdf:datatype="http://www.w3.org/2001/XMLSchema#double">70000.0</PREZZO>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#re_casa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#re_casa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Agenzia"/>
+        <ha_proposto_in_fitto rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Appartamento_centro_Storico"/>
+        <EMAIL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recasa@gmail.com</EMAIL>
+        <INDIRIZZO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VIA Cavour N.54</INDIRIZZO>
+        <P_IVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8888888888</P_IVA>
+        <RAGIONE_SOCIALE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Re Casa SRL</RAGIONE_SOCIALE>
+        <TELEFONO rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4494213224</TELEFONO>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#tecnocasa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#tecnocasa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Agenzia"/>
+        <ha_proposto_in_fitto rdf:resource="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Monolocale_periferia"/>
+        <EMAIL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TecnoCasa@gmail.com</EMAIL>
+        <INDIRIZZO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VIA Ponte N 27</INDIRIZZO>
+        <P_IVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7586456385</P_IVA>
+        <RAGIONE_SOCIALE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tecnocasa SRL</RAGIONE_SOCIALE>
+        <TELEFONO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8991234765</TELEFONO>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Appartamento"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Casa_indipendente"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Garage"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Locale_Commerciale"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vincenzobevilacqua/ontologies/2018/5/untitled-ontology-70#Monolocale"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
