@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Progetto di web semantico 2018">
+    <meta name="author" content="depiano.it">
+    <link rel="shortcut icon" type="image/png" href="../img/portfolio/logo.png"/>
+
+    <title>Agenzia Immobiliare</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+
+        var urlParams = new URLSearchParams(window.location.search);
+        var q_id=urlParams.get('query_id');
+        var piva="";
+        var cf_user="";
+        var immobile_lat="";
+        var immobile_long=""; 
+        
+        if (q_id.indexOf("dettaglioAgenzia") !=-1)
+        {   
+            var fields = q_id.split('-');
+
+            q_id = fields[0]; //dettaglioAgenzia
+            piva = fields[1]; //piva agenzia
+        }
+        if (q_id.indexOf("dettaglioImmobili") !=-1)
+        {   
+            var fields = q_id.split('-');
+
+            q_id = fields[0]; //dettaglioImmobili
+            immobile_lat = fields[1]; //latitudine
+            immobile_long = fields[2]; //longitudine
+        }
+        if (q_id.indexOf("dettaglioUtente") !=-1)
+        {   
+            var fields = q_id.split('-');
+
+            q_id = fields[0]; //dettaglioUtente
+            cf_user = fields[1]; //cf utente
+        }
+                
+        switch(q_id)
+        {
+            case "dettaglioAgenzia":
+                $("#query_name").text("Dettaglio agenzia");
+            break;
+            
+            case "dettaglioImmobili":
+                $("#query_name").text("Dettaglio immobile");
+            break;
+            
+            case "dettaglioUtente":
+                $("#query_name").text("Dettaglio utente");
+            break;
+            
+          case "immobili_1":
+              $("#query_name").text("Visualizza informazioni di tutti gli immobili");
+              break;
+          case "immobili_2":
+                  $("#query_name").text('Visualizza informazioni di tutti gli immobili proposti in vendita da un privato');
+                  break;
+          case "immobili_3":
+                  $("#query_name").text('Visualizza informazioni di tutti gli immobili proposti in vendita da un'+"'"+'agenzia');
+                  break;
+          case "immobili_4":
+                  $("#query_name").text('Visualizza informazioni di tutti gli immobili proposti in fitto da un privato');
+                  break;
+          case "immobili_5":
+                  $("#query_name").text('Visualizza informazioni di tutti gli immobili proposti in fitto da un'+"'"+'agenzia');
+                  break;
+          case "immobili_6":
+                  $("#query_name").text('Visualizza informazioni di tutti gli immobili con una specifica misura (metri quadrati)');
+                  break;
+          case "immobili_7":
+                  $("#query_name").text('Visualizza informazioni di tutti gli immobili costruiti in un determinato anno');
+                  break;
+          case "immobili_8":
+                  $("#query_name").text('Visualizza informazioni di tutti gli immobili già arredati');
+                  break;
+          case "immobili_9":
+                  $("#query_name").text('Visualizza informazioni di tutti gli immobili con una determinata classe energetica');
+                  break;
+          case "immobili_10":
+                  $("#query_name").text('Visualizza informazioni di tutti gli immobili con giardino');
+                  break;
+          case "immobili_11":
+                  $("#query_name").text('Visualizza informazioni di tutti gli immobili con un determinato numero di bagni');
+                  break;
+          case "immobili_12":
+                  $("#query_name").text('Visualizza informazioni di tutti gli immobili con un determinato numero di livelli');
+                  break;
+          case "immobili_13":
+                  $("#query_name").text('Visualizza informazioni di tutti gli immobili con un determinato numero di vani');
+                  break;
+          case "immobili_14":
+                  $("#query_name").text('Visualizza informazioni di tutti gli immobili situati a un determinato piano');
+                  break;
+          case "immobili_15":
+                  $("#query_name").text('Visualizza informazioni di tutti gli immobili con un determinato prezzo');
+                  break;
+          case "immobili_16":
+                  $("#query_name").text('Visualizza informazioni di tutti gli immobili dotati di posto auto');
+                  break;
+          case "Agenzia_Immobiliare_1":
+                  $("#query_name").text('Visualizza informazioni di tutte le agenzie immobiliari');
+                  break;
+          case "Agenzia_Immobiliare_2":
+                  $("#query_name").text('Visualizza informazioni agenzia che ha proposto in fitto un immobile');
+                  break;
+          case "Agenzia_Immobiliare_3":
+                  $("#query_name").text('Visualizza informazioni agenzia che ha proposto in vendita un immobile');
+                  break;
+          case "proprietari_1":
+                  $("#query_name").text('Visualizza informazioni proprietari immobile');
+                  break;
+          case "proprietari_2":
+                  $("#query_name").text('Visualizza informazioni proprietario specifico');
+                  break;
+          case "proprietari_3":
+                  $("#query_name").text('Visualizza informazioni proprietario specifico in base all'+"'"+'immobile');
+                  break;
+          case "proprietari_4":
+                  $("#query_name").text('Visualizza informazioni persona che ha venduto un immobile');
+                  break;
+          case "proprietari_5":
+                  $("#query_name").text('Visualizza informazioni persona che ha proposto in fitto un immobile');
+                  break;
+          case "proprietari_6":
+                  $("#query_name").text('Visualizza informazioni persona che ha proposto in vendita un immobile');
+                  break;
+          case "proprietari_7":
+                  $("#query_name").text('Visualizza informazioni persona che ha acquistato un immobile');
+                  break;
+          case "proprietari_8":
+                  $("#query_name").text('Visualizza informazioni persona che ha preso in fitto un immobile');
+                  break;
+          
+          default:
+              $("#query_name").text("Info querySPARQL...");
+        }
+
+      console.log('stampo: '+urlParams.get('query_id'));
+      
+   
+       
+     
+       if(q_id=='dettaglioAgenzia'){
+              $.ajax({
+                  url: "http://localhost:8080/AgenziaImmobiliare_ws/Helloworld",
+                  type: "GET",
+                  data: {
+                      'query_id': q_id+"-"+piva
+                  },
+                  dataType: "JSON",
+                 
+                  success: function (jsonStr) {
+                      //  alert(JSON.stringify(jsonStr));
+                      
+                      var piva="";
+                      var ragione_sociale="";
+                     var indirizzo_Agenzia="";
+                     var telefono_Agenzia="";
+                     var email_Agenzia="";
+                     
+                  
+                      var counter;
+                       var divInfoAgenzia = document.getElementById("divDettaglioAgenzia");
+                          divInfoAgenzia.removeAttribute("hidden");
+                      for (var i = 0; i < jsonStr['result_query']['Agenzia'].length; i++) {
+                         var counter = jsonStr['result_query']['Agenzia'][i];
+                        
+                              piva="<p>"+counter['piva']+"</p>";
+                              ragione_sociale="<p>"+counter['ragione_sociale']+"</p>";
+                              indirizzo_Agenzia="<p>"+counter['indirizzo']+"</p>";
+                              telefono_Agenzia="<p>"+counter['telefono']+"</p>";
+                              email_Agenzia="<p>"+counter['email']+"</p>";
+                        }
+                       
+                         var divPiva = document.getElementById("p_iva");
+                          divPiva.innerHTML=piva;
+                          var divRagioneSociale=document.getElementById("ragioneSociale");
+                          divRagioneSociale.innerHTML=ragione_sociale;
+                          var divIndirizzoAgenzia=document.getElementById("indirizzoAgenzia");
+                          divIndirizzoAgenzia.innerHTML=indirizzo_Agenzia;
+                          var divTelefonoAgenzia = document.getElementById("telefonoAgenzia");
+                          divTelefonoAgenzia.innerHTML=telefono_Agenzia;
+                          var divEmailAgenzia = document.getElementById("emailAgenzia");
+                          divEmailAgenzia.innerHTML=email_Agenzia;
+                        
+                  
+                  }
+              });
+          }
+      
+      
+      
+      
+       if(q_id=='dettaglioUtente'){
+              $.ajax({
+                  url: "http://localhost:8080/AgenziaImmobiliare_ws/Helloworld",
+                  type: "GET",
+                  data: {
+                      'query_id': q_id+"-"+cf_user
+                  },
+                  dataType: "JSON",
+                 
+                  success: function (jsonStr) {
+                        //alert(JSON.stringify(jsonStr));
+                      
+                      var nome="";
+                      var cognome="";
+                      var codice_fiscale="";
+                     var indirizzo_Persona="";
+                     var telefono_Persona="";
+                     var email_Persona="";
+                     
+                  
+                      var counter;
+                      var divInfoPersona = document.getElementById("divDettaglioPersona");
+                          divInfoPersona.removeAttribute("hidden");
+                      for (var i = 0; i < jsonStr['result_query']['Persona'].length; i++) {
+                         var counter = jsonStr['result_query']['Persona'][i];
+                        
+                              nome="<p>"+counter['nome']+"</p>";
+                              cognome="<p>"+counter['cognome']+"</p>";
+                              codice_fiscale="<p>"+counter['cf']+"</p>";
+                              indirizzo_Persona="<p>"+counter['indirizzo']+"</p>";
+                              telefono_Persona="<p>"+counter['telefono']+"</p>";
+                              email_Persona="<p>"+counter['email']+"</p>";
+                        }
+                       
+                         var divNome = document.getElementById("nome");
+                          divNome.innerHTML=nome;
+                          var divCognome=document.getElementById("cognome");
+                          divCognome.innerHTML=cognome;
+                          var divIndirizzoPersona=document.getElementById("indirizzoPersona");
+                         divIndirizzoPersona.innerHTML=indirizzo_Persona;
+                          var divTelefonoPersona = document.getElementById("telefonoPersona");
+                          divTelefonoPersona.innerHTML=telefono_Persona;
+                          var divEmailPersona = document.getElementById("emailPersona");
+                          divEmailPersona.innerHTML=email_Persona;
+                          var divCodiceFiscale= document.getElementById("cf");
+                          divCodiceFiscale.innerHTML=codice_fiscale;
+                        
+                  
+                  }
+              });
+          }
+      
+      
+       if(q_id=='dettaglioImmobili'){
+              $.ajax({
+                  url: "http://localhost:8080/AgenziaImmobiliare_ws/Helloworld",
+                  type: "GET",
+                  data: {
+                      'query_id': q_id+"-"+immobile_lat+"-"+immobile_long
+                  },
+                  dataType: "JSON",
+                 
+                  success: function (jsonStr) {
+                        //alert(JSON.stringify(jsonStr));
+                      
+                      var latitudine="";
+                      var longitudine="";
+                      var dug="";
+                      var denominazione="";
+                      var civico="";
+                      var esponente="";
+                      var classe_Energetica="";
+                      var metri="";
+                      var arredamento="";
+                      var giardino="";
+                      var auto="";
+                      var prezzo="";
+                      var descrizione="";
+                      var piano="";
+                      var livelli="";
+                      var bagni="";
+                      var vani="";
+                    
+                     
+                  
+                      var counter;
+                      
+                      
+                      var divInfoImmobili = document.getElementById("divDettaglioImmobile");
+                          divInfoImmobili.removeAttribute("hidden");
+                          
+                      for (var i = 0; i < jsonStr['result_query']['Immobile'].length; i++) {
+                         var counter = jsonStr['result_query']['Immobile'][i];
+                         
+                              longitudine="<p>"+counter['longitudine']+"</p>";
+                              latitudine="<p>"+counter['latitudine']+"</p>";
+                              dug="<p>"+counter['dug']+"</p>";
+                              denominazione="<p>"+counter['denominazione']+"</p>";
+                              civico="<p>"+counter['civico']+"</p>";
+                              esponente="<p>NON DISPONIBILE</p>";
+                              classe_Energetica="<p>"+counter['classe_energetica']+"</p>";
+                               metri="<p>"+counter['metri_quadrati']+"</p>";
+                              arredamento="<p>"+counter['arredamento']+"</p>";
+                              giardino="<p>"+counter['giardino']+"</p>";
+                               auto="<p>"+counter['posto_auto']+"</p>";
+                              prezzo="<p>"+counter['prezzo']+"</p>";
+                              descrizione=counter['descrizione'];
+                               piano="<p>"+counter['piano']+"</p>";
+                              livelli="<p>"+counter['num_livelli']+"</p>";
+                               bagni="<p>"+counter['num_bagni']+"</p>";
+                               vani="<p>"+counter['num_vani']+"</p>";
+                              
+                             
+                        }
+                       
+                 
+                          var divLatitudine = document.getElementById("latitudine");
+                          divLatitudine.innerHTML=latitudine;
+                          var divLongitudine=document.getElementById("longitudine");
+                          divLongitudine.innerHTML=longitudine;
+                          var divDug=document.getElementById("dug");
+                          divDug.innerHTML=dug;
+                          var divDenominazione = document.getElementById("denominazione");
+                          divDenominazione.innerHTML=denominazione;
+                          var divCivico = document.getElementById("civico");
+                          divCivico.innerHTML=civico;
+                          var divEsponente = document.getElementById("esponente");
+                          divEsponente.innerHTML=esponente;
+                          var divClasseEnergetica = document.getElementById("classeEnergetica");
+                          divClasseEnergetica.innerHTML=classe_Energetica;
+                          var divMetri = document.getElementById("metri");
+                          divMetri.innerHTML=metri;
+                          var divArredamento = document.getElementById("arredamento");
+                          divArredamento.innerHTML=arredamento;
+                           var divGiardino = document.getElementById("giardino");
+                          divGiardino.innerHTML=giardino;
+                           var divAuto = document.getElementById("auto");
+                          divAuto.innerHTML=auto;
+                          var divPrezzo = document.getElementById("prezzo");
+                          divPrezzo.innerHTML=prezzo;
+                           var divDescrizione = document.getElementById("descrizione");
+                          divDescrizione.innerHTML=descrizione;
+                          var divPiano = document.getElementById("piano");
+                          divPiano.innerHTML=piano;
+                           var divLivelli = document.getElementById("livelli");
+                          divLivelli.innerHTML=livelli;
+                          var divBagni = document.getElementById("bagni");
+                          divBagni.innerHTML=bagni;
+                           var divVani = document.getElementById("vani");
+                          divVani.innerHTML=vani;
+                  
+                  }
+              });
+          }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+             if(q_id=='Agenzia_Immobiliare_1'||q_id=='Agenzia_Immobiliare_2'||q_id=='Agenzia_Immobiliare_3'){
+              $.ajax({
+                  url: "http://localhost:8080/AgenziaImmobiliare_ws/Helloworld",
+                  type: "GET",
+                  data: {
+                      'query_id': q_id
+                  },
+                  dataType: "JSON",
+                 
+                  success: function (jsonStr) {
+                        //alert(JSON.stringify(jsonStr));
+                      //alert(JSON.stringify(jsonStr));
+                   //   $("#ok").text(JSON.stringify("Agenzia"));
+                      var tabAgenzia="";
+                     
+                      var j=0;
+                      var counter;
+                 
+                      for (var i = 0; i < jsonStr['result_query']['Agenzia'].length; i++) {
+                         var counter = jsonStr['result_query']['Agenzia'][i];
+                            j=i+1;
+                            
+                          if(q_id=='Agenzia_Immobiliare_1'){
+                           
+                            tabAgenzia+="<tr><td>"+j+"</td>"+"<td><a href="+"./result.html?query_id=dettaglioAgenzia-"+counter['piva']+">"+counter['piva']+"</a></td>"+"<td>"+counter['ragione_sociale']+"</td>"+"<td>"+counter['indirizzo']+"</td></tr>"; 
+                          }
+                          if(q_id=='Agenzia_Immobiliare_2'||q_id=='Agenzia_Immobiliare_3'){
+                              tabAgenzia+="<tr><td>"+j+"</td>"+"<td><a href="+"./result.html?query_id=dettaglioAgenzia-"+counter['piva']+">"+counter['piva']+"</a></td>"+"<td>"+counter['ragione_sociale']+"</td>"+"<td>"+counter['indirizzo']+"</td><td><a href="+"./result.html?query_id=dettaglioImmobili-"+counter['latitudine']+"-"+counter['longitudine']+">"+counter['latitudine']+"</a></td>"+  "<td><a href="+"./result.html?query_id=dettaglioImmobili-"+counter['latitudine']+"-"+counter['longitudine']+">"+counter['longitudine']+"</a>"  +"</td></tr>"; 
+                          }
+                           
+                        }
+                        
+                         if(q_id=='Agenzia_Immobiliare_1'){
+                        var tabellaAgenzia=document.getElementById("divTabellaAgenzia");
+                         tabellaAgenzia.removeAttribute("hidden");
+                         var divInfo = document.getElementById("infoAgenzia");
+                          divInfo.innerHTML=tabAgenzia;}
+                      else{
+                           if(q_id=='Agenzia_Immobiliare_2'||q_id=='Agenzia_Immobiliare_3'){
+                                var tabellaAgenziaImmobile=document.getElementById("divTabellaAgenziaImmobile");
+                                tabellaAgenziaImmobile.removeAttribute("hidden");
+                                var divInfoImmobile = document.getElementById("infoAgenziaImmobile");
+                                 divInfoImmobile.innerHTML=tabAgenzia;
+                           }
+                       }
+                          
+                  }
+              });
+          }
+          
+          
+           if(q_id=='proprietari_1'||q_id=='proprietari_2'||q_id=='proprietari_3'||q_id=='proprietari_4'
+                   ||q_id=='proprietari_5'||q_id=='proprietari_6'||q_id=='proprietari_7'||q_id=='proprietari_8'){
+              $.ajax({
+                  url: "http://localhost:8080/AgenziaImmobiliare_ws/Helloworld",
+                  type: "GET",
+                  data: {
+                      'query_id': q_id
+                  },
+                  dataType: "JSON",
+                 
+                  success: function (jsonStr) {
+                        //alert(JSON.stringify(jsonStr));
+                 
+                   //   $("#ok").text(JSON.stringify("Agenzia"));
+                      var tabPersona="";
+                     
+                      var j=0;
+                 
+                      for (var i = 0; i < jsonStr['result_query']['Persona'].length; i++) {
+                            var counter = jsonStr['result_query']['Persona'][i];
+                            j=i+1;
+                            
+                           /* if(q_id=='proprietari_1'){
+                                  tabPersona+="<tr><td>"+j+"</td>"+"<td>"+counter['nome']+"</td>"+"<td>"+counter['cognome']+"</td>"+"<td><a href="+"./result.html?query_id=dettaglioProprietario-"+counter['cf']+">"+counter['cf']+"</a></td></tr>";
+                            }*/
+                        
+                                if(q_id=='proprietari_1'||q_id=='proprietari_2'||q_id=='proprietari_3'||q_id=='proprietari_4'||q_id=='proprietari_5'||q_id=='proprietari_6'||q_id=='proprietari_7'||q_id=='proprietari_8'){
+                                    
+                                     tabPersona+="<tr><td>"+j+"</td>"+"<td>"+counter['nome']+"</td>"+"<td>"+counter['cognome']+"</td>"+"<td><a href="+"./result.html?query_id=dettaglioUtente-"+counter['cf']+">"+counter['cf']+"</a></td><td><a href="+"./result.html?query_id=dettaglioImmobili-"+counter['latitudine']+"-"+counter['longitudine']+">"+counter['latitudine']+"</a></td><td><a href="+"./result.html?query_id=dettaglioImmobili-"+counter['latitudine']+"-"+counter['longitudine']+">"+counter['longitudine']+"</a>"+"</td></tr>";
+                                    
+                                
+                            }
+                          
+                        }
+                       /* if(q_id=='proprietari_1'){
+                        var tabellaProprietario=document.getElementById("divTabellaProprietario");
+                         tabellaProprietario.removeAttribute("hidden");
+                         var divInfo = document.getElementById("infoProprietario");
+                          divInfo.innerHTML=tabPersona;
+                      }*/
+                    
+                           if(q_id=='proprietari_1'||q_id=='proprietari_2'||q_id=='proprietari_3'||q_id=='proprietari_4'||q_id=='proprietari_5'||q_id=='proprietari_6'||q_id=='proprietari_7'||q_id=='proprietari_8'){
+                        var tabellaProprietarioImmobile=document.getElementById("divTabellaProprietarioImmobile");
+                         tabellaProprietarioImmobile.removeAttribute("hidden");
+                         var divInfo = document.getElementById("infoProprietarioImmobile");
+                          divInfo.innerHTML=tabPersona;
+                      }
+                          
+                      
+                         
+                  }
+              });
+          }
+           if(q_id=='immobili_1'||q_id=='immobili_2'||q_id=='immobili_3'||q_id=='immobili_4'
+                   ||q_id=='immobili_5'||q_id=='immobili_6'||q_id=='immobili_7'||q_id=='immobili_8'
+                   ||q_id=='immobili_9'||q_id=='immobili_10'||q_id=='immobili_11'||q_id=='immobili_12'
+                   ||q_id=='immobili_13'||q_id=='immobili_14'||q_id=='immobili_15'||q_id=='immobili_16'){
+              $.ajax({
+                  url: "http://localhost:8080/AgenziaImmobiliare_ws/Helloworld",
+                  type: "GET",
+                  data: {
+                      'query_id': q_id
+                  },
+                  dataType: "JSON",
+                 
+                  success: function (jsonStr) {
+                       // alert(JSON.stringify(jsonStr));
+                 
+            
+                      var tabImmobile="";
+                     
+                      var j=0;
+                 
+                      for (var i = 0; i < jsonStr['result_query']['Immobile'].length; i++) {
+                            var counter = jsonStr['result_query']['Immobile'][i];
+                            j=i+1;
+                            if(q_id=='immobili_1'||q_id=='immobili_2'||q_id=='immobili_4'||
+                                 q_id=='immobili_6'||q_id=='immobili_7'||q_id=='immobili_8'
+                                    ||q_id=='immobili_9'||q_id=='immobili_10'||q_id=='immobili_11'||q_id=='immobili_12'
+                                        ||q_id=='immobili_13'||q_id=='immobili_14'||q_id=='immobili_15'||q_id=='immobili_16'){
+                            
+                            tabImmobile+="<tr><td>"+j+"</td>"+"<td><a href="+"./result.html?query_id=dettaglioImmobili-"+counter['latitudine']+"-"+counter['longitudine']+">"+counter['latitudine']+"</a></td>"+"<td><a href="+"./result.html?query_id=dettaglioImmobili-"+counter['latitudine']+"-"+counter['longitudine']+">"+counter['longitudine']+"</a>"+"</td>"+"<td>"+counter['dug']+"</td>"+"<td>"+counter['denominazione']+"</td>"+"<td>"+counter['civico']+"</td>"+"<td> <a href="+"./result.html?query_id=dettaglioUtente-"+counter['cf']+">"+counter['cf']+"</a></td></tr>";
+                        }else{
+                           if(q_id=='immobili_3'||q_id=='immobili_5')
+                           {
+                                tabImmobile+="<tr><td>"+j+"</td>"+"<td><a href="+"./result.html?qu+ery_id=dettaglioImmobili-"+counter['latitudine']+"-"+counter['longitudine']+">"+counter['latitudine']+"</a></td>"+"<td><a href="+"./result.html?query_id=dettaglioImmobili-"+counter['latitudine']+"-"+counter['longitudine']+">"+counter['longitudine']+"</a>"+"</td>"+"<td>"+counter['dug']+"</td>"+"<td>"+counter['denominazione']+"</td>"+"<td>"+counter['civico']+"</td>"+"<td><a href=./result.html?query_id=dettaglioAgenzia-"+counter['piva']+">"+counter['piva']+"</a></td></tr>";
+                               
+                               
+                           } 
+                            
+                            
+                        }
+                        
+                        }
+                           if(q_id=='immobili_1'||q_id=='immobili_2'||q_id=='immobili_4'||
+                                 q_id=='immobili_6'||q_id=='immobili_7'||q_id=='immobili_8'
+                                    ||q_id=='immobili_9'||q_id=='immobili_10'||q_id=='immobili_11'||q_id=='immobili_12'
+                                        ||q_id=='immobili_13'||q_id=='immobili_14'||q_id=='immobili_15'||q_id=='immobili_16'){
+                        var tabellaImmobile=document.getElementById("divTabellaImmobile");
+                         tabellaImmobile.removeAttribute("hidden");
+                         var divInfoImmobile = document.getElementById("infoImmobile");
+                          divInfoImmobile.innerHTML=tabImmobile;
+                                        }
+                           
+                        if(q_id=='immobili_2'){
+                             var divCellaImmobile = document.getElementById("cellaCf");
+                          var cella="<th>"+"Venditore"+"</th>";
+                          divCellaImmobile.innerHTML=cella;  
+                              
+                          }
+                          
+                          if(q_id=='immobili_4'){
+                                 var divCellaImmobile = document.getElementById("cellaCf");
+                          var cella="<th>"+"Locatore"+"</th>";
+                          divCellaImmobile.innerHTML=cella;   
+                                  
+                          }
+                          if(q_id=='immobili_3'||q_id=='immobili_5'){
+                               
+                          var tabellaImmobileAgenzia=document.getElementById("divTabellaImmobileAgenzia");
+                         tabellaImmobileAgenzia.removeAttribute("hidden");
+                         
+                         var divInfoImmobileAgenzia = document.getElementById("infoImmobileAgenzia");
+                          divInfoImmobileAgenzia.innerHTML=tabImmobile;
+                                var divCellaImmobile = document.getElementById("cellaPiva");
+                                var cella="<th>"+"Agenzia"+"</th>";
+                                divCellaImmobile.innerHTML=cella;  
+                      }
+                      if(q_id=='immobili_1'||q_id=='immobili_6'||q_id=='immobili_7'||q_id=='immobili_8'
+                          ||q_id=='immobili_9'||q_id=='immobili_10'|q_id=='immobili_11'||q_id=='immobili_12'
+                          ||q_id=='immobili_13'||q_id=='immobili_14'||q_id=='immobili_14'||q_id=='immobili_15'||q_id=='immobili_16'){
+                          var divCellaImmobile = document.getElementById("cellaCf");
+                          var cella="<th>"+"Proprietario"+"</th>";
+                          divCellaImmobile.innerHTML=cella; 
+                      }
+                      
+                  }
+              });
+          }
+          
+          
+      
+          
+       
+          
+          
+          
+    });
+
+    </script>
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="./index.html">Agenzia Immobiliare</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+
+      </div>
+    </nav>
+    <p class="margin-top: 5%;">
+    </p>
+    <section id="contact">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Report</h2>
+        <h6 class="text-center text-uppercase text-secondary mb-0" id="query_name"></h6>
+        <hr class="star-dark mb-5">
+
+        
+        
+        
+        
+        <!-- style="margin-top:-30px; margin-left: 130px;"-->
+        
+         <div class="row" >
+        <!-- tabella delle Agenzie -->
+       
+        <div class="col-md-6" hidden id="divTabellaAgenzia"  style="min-width: 600px; margin-top:-20px; margin-left: 145px;" >
+         <img class="img-fluid" src="img/portfolio/agenziaimmobiliare.png" alt="" style="display: block; margin-left: auto; margin-right: 105px; width: 20%;">
+        <table class="table table-hover" id="tabellaAgenzia" >
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">P_iva</th>
+      <th scope="col" style="min-width: 300px;">Ragione Sociale</th>
+      <th scope="col" style="min-width: 300px;" >Indirizzo</th>
+    </tr>
+  </thead>
+  <tbody id="infoAgenzia">
+    
+     </tbody>
+</table>
+    </div>
+            
+            
+            
+            
+            
+          <!-- tabella delle Agenzie che vendono o fittano un immobile -->
+
+         <div class="col-md-6" hidden id="divTabellaAgenziaImmobile"  style="min-width: 600px; margin-top:-20px; margin-left: 90px;"  >
+         <img class="img-fluid" src="img/portfolio/agenziaimmobiliare.png" alt="" style="display: block; margin-left: auto; margin-right: 50px; width: 20%;">
+        <table class="table table-hover" id="tabellaAgenziaImmobile" >
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">P_iva</th>
+      <th scope="col" style="min-width: 300px;">Ragione Sociale</th>
+      <th scope="col" style="min-width: 300px;">Indirizzo</th>
+      <th scope="col">Latitudine</th>
+      <th scope="col">Longitudine</th>
+    </tr>
+  </thead>
+  <tbody id="infoAgenziaImmobile">
+    
+     </tbody>
+</table>
+    </div>    
+            
+   
+            
+            <!-- tabella informazione Proprietario immobile -->
+
+   <div class="col-md-6" hidden id="divTabellaProprietario" style="min-width: 700px;  margin-left: -80px;" >
+       <img class="img-fluid" src="img/portfolio/proprietario.png" alt="" style="display: block; margin-left: auto; margin-right: 1000px; width: 20%;">
+  
+        <table class="table table-hover" id="tabellaProprietario" >
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Cognome</th>
+      <th scope="col" align="center">Codice fiscale</th>
+    </tr>
+  </thead>
+  <tbody id="infoProprietario">
+    
+     </tbody>
+</table>
+    </div>
+    
+     <!-- tabella informazione Persona che ha venduto/comprato/fittato immobile -->
+
+   <div class="col-md-6" hidden id="divTabellaProprietarioImmobile" style="min-width: 700px; margin-top:-20px; margin-left: 180px;" >
+       <img class="img-fluid" src="img/portfolio/proprietario.png" alt="" style="display: block; margin-left: auto; margin-right: 230px; width: 20%">
+  
+        <table class="table table-hover" id="tabellaProprietarioImmobile" >
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Cognome</th>
+      <th scope="col">Codice Fiscale</th>
+      <th scope="col">Latitudine</th>
+      <th scope="col">Longitudine</th>
+    </tr>
+  </thead>
+  <tbody id="infoProprietarioImmobile">
+   
+     </tbody>
+</table>    
+    </div>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+ <!-- tabella informazione Immobile / fitato-venduto da persona -->
+    <div class="col-md-6" hidden id="divTabellaImmobile" style="min-width: 700px; margin-top:-20px; margin-left: 150px;">
+        <img class="img-fluid" src="img/portfolio/immobile.png" alt="" style="display: block; margin-left: auto; margin-right: 200px; width: 20%;">
+ <table class="table table-hover" id="tabellaImmobile" >
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Latitudine</th>
+      <th scope="col">Longitudine</th>
+      <th scope="col">Dug</th>
+      <th scope="col" style="min-width: 200px;">Denominazione</th>
+      <th scope="col">Civico</th>
+     
+      <th id="cellaCf" scope="col"></th>
+    </tr>
+  </thead>
+  <tbody id="infoImmobile">
+     </tbody>
+</table>   
+    </div>
+ 
+ <!-- tabella informazione Immobile / fitato-venduto d Agenzia -->
+    <div class="col-md-6" hidden id="divTabellaImmobileAgenzia" style="min-width: 700px;margin-top:-20px; margin-left: 240px;">
+        <img class="img-fluid" src="img/portfolio/immobile.png" alt="" style="display: block; margin-left: auto; margin-right:290px; width: 20%;">
+ <table class="table table-hover" id="tabellaImmobileAgenzia" >
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Latitudine</th>
+      <th scope="col">Longitudine</th>
+      <th scope="col">Dug</th>
+      <th scope="col">Denominazione</th>
+      <th scope="col">Civico</th>
+      <th scope="col" id="cellaPiva"></th>
+    </tr>
+  </thead>
+  <tbody id="infoImmobileAgenzia">
+     </tbody>
+</table>   
+    </div>
+ 
+ 
+ 
+ 
+ <!-- Dettaglio  informazioni Agenzia-->
+ <div class="col-lg-4"  hidden id='divDettaglioAgenzia'  style="min-width: 600px;margin-top:-20px; margin-left: 240px;">
+
+     <img class="img-fluid" src="img/portfolio/agenziaimmobiliare.png" alt="" style="display: block; margin-left: auto; margin-right:200px; width: 20%;">
+        <fieldset class="form-group" >
+          <label style="font-weight: bold; color:#000" >Partita iva</label>
+          <p class="help-block" id="p_iva"></p>
+            <hr/>
+        </fieldset>
+      
+     
+        <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Ragione Sociale</label>
+          <p class="help-block" id="ragioneSociale"></p>
+            <hr/>
+        </fieldset>
+      
+         
+
+        <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Indirizzo</label>
+          <p class="help-block" id="indirizzoAgenzia"> </p>
+            <hr/>
+        </fieldset>
+  
+
+        <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Telefono</label>
+          <p class="help-block" id="telefonoAgenzia"> </p>
+            <hr/>
+        </fieldset>
+       
+
+        <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Email</label>
+        
+        <p class="help-block" id="emailAgenzia"> </p>
+            <hr/>
+        </fieldset>
+  
+
+     
+
+    </div>
+ 
+ 
+ 
+  
+  
+  <!-- Dettaglio  informazioni Persona-->
+  
+ <div class="col-lg-6" hidden  id='divDettaglioPersona' style="min-width: 600px;margin-top:-20px; margin-left: 240px;">
+
+        <img class="img-fluid" src="img/portfolio/proprietario.png" alt="" style="display: block; margin-left: auto; margin-right:200px; width: 20%;">
+        <fieldset class="form-group" >
+          <label style="font-weight: bold; color:#000" >Nome</label>
+          <p class="help-block" id="nome"></p>
+             <hr/>
+        </fieldset>
+     
+     
+        <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Cognome</label>
+          <p class="help-block" id="cognome"></p>
+          <hr/>
+        </fieldset>
+        
+         
+
+        <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Codice Fiscale</label>
+          <p class="help-block" id="cf"></p>
+          <hr/>
+        </fieldset>
+        
+
+        <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Indirizzo</label>
+          <p class="help-block" id="indirizzoPersona"> </p>
+             <hr/>
+        </fieldset>
+        
+           <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Telefono</label>
+          <p class="help-block" id="telefonoPersona"> </p>
+             <hr/>
+        </fieldset>
+     
+
+        <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Email</label>
+          <p class="help-block" id="emailPersona"> </p>
+            <hr/>
+        </fieldset>
+      
+    </div>
+  
+  
+  
+  <!-- Dettaglio  informazioni Immobile-->
+  
+ <div class="col-lg-6" hidden  id='divDettaglioImmobile' style="min-width: 700px;margin-top:-20px; margin-left: 240px;">
+
+     <img class="img-fluid" src="img/portfolio/immobile.png" alt="" style="display: block; margin-left: auto; margin-right:290px; width: 20%;">
+     
+     
+     
+     
+     <table class="table table-borderless">
+ 
+  <tbody>
+    <tr>
+     
+      <td>
+        <fieldset class="form-group" >
+          <label style="font-weight: bold; color:#000" >Longitudine</label>
+          <p class="help-block" id="longitudine"></p>
+           <hr/>
+        </fieldset>
+       
+     
+        <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Latitudine</label>
+          <p class="help-block" id="latitudine"></p>
+           <hr/>
+        </fieldset>
+  
+         
+
+        <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">DUG</label>
+          <p class="help-block" id="dug"></p>
+           <hr/>
+        </fieldset>
+       
+
+        <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Denominazione</label>
+          <p class="help-block" id="denominazione"> </p>
+           <hr/>
+        </fieldset>
+
+          
+      <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Civico</label>
+          <p class="help-block" id="civico"> </p>
+           <hr/>
+        </fieldset>
+        
+          
+        <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Esponente</label>
+          <p class="help-block" id="esponente"> </p>
+           <hr/>
+        </fieldset>
+ 
+      </td>
+      <td> 
+      
+      <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Classe Energetica</label>
+          <p class="help-block" id="classeEnergetica"> </p>
+          <hr/>
+        </fieldset>
+        
+        
+        
+        <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Metri Quadrati</label>
+          <p class="help-block" id="metri"> </p>
+          <hr/>
+        </fieldset>
+        
+          
+         <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Arredamento</label>
+          <p class="help-block" id="arredamento"> </p>
+          <hr/>
+        </fieldset>
+      
+        
+        
+        <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Giardino</label>
+          <p class="help-block" id="giardino"> </p>
+          <hr/>
+        </fieldset>
+    
+         <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Posto Auto</label>
+          <p class="help-block" id="auto"> </p>
+          <hr/>
+        </fieldset>
+    
+          
+       <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Prezzo</label>
+          <p class="help-block" id="prezzo"> </p>
+          <hr/>
+        </fieldset>
+       
+       
+      </td> 
+    </tr>
+    <tr>
+        <td colspan="2">
+       <fieldset class="form-group">
+            <label>Descrizione</label><br>
+            <textarea rows="5" cols="70" disabled id="descrizione"></textarea>
+          </fieldset>  
+      
+        </td>
+        </tr>
+        
+        
+        
+        <tr>
+            
+            <td>
+              <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Piano</label>
+          <p class="help-block" id="piano"> </p>
+          <hr/>
+        </fieldset>
+  
+           <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Numero livelli</label>
+          <p class="help-block" id="livelli"> </p>
+          <hr/>
+        </fieldset>
+   
+           </td>  
+           
+           <td>
+               
+             <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Numero bagni</label>
+          <p class="help-block" id="bagni"> </p>
+          <hr/>
+        </fieldset>
+      
+                <fieldset class="form-group">
+          <label style="font-weight: bold; color:#000">Numero stanze</label>
+          <p class="help-block" id="vani"> </p>
+          <hr/>
+        </fieldset>
+   
+               
+           </td>
+        
+    </tr>
+   
+   </tbody>
+</table>
+   </div>
+ 
+ 
+<!-- 
+    <div class="col-md-6">
+      <img class="img-fluid" src="img/portfolio/relazione.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 20%;">
+
+          <label>Nome: </label><span id="nome_proprietario" style="color:green;"></span> ;
+          <label>Cognome: </label><span id="cognome_proprietario" style="color:lightblue;"></span> ;
+          <label>Email: </label><span id="email_proprietario" style="color:lightblue;"></span> ;
+          <label>Indirizzo: </label><span id="indirizzo_proprietario" style="color:lightblue;"></span> ;
+    </div>
+-->
+  </div>
+          </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-5 mb-lg-0">
+            <h4 class="text-uppercase mb-4">Dove siamo</h4>
+            <p class="lead mb-0">Via Fratta, 22
+              <br>Solofra, AV 83029</p>
+          </div>
+          <div class="col-md-4 mb-5 mb-lg-0">
+            <h4 class="text-uppercase mb-4">Social</h4>
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fa fa-fw fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fa fa-fw fa-google-plus"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fa fa-fw fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fa fa-fw fa-linkedin"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fa fa-fw fa-dribbble"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4 class="text-uppercase mb-4">Lavora con noi</h4>
+            <p class="lead mb-0">Candidati all' indirizzo eMail: job@agenziaimmobiliare.it</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="copyright py-4 text-center text-white">
+      <div class="container">
+        <small>Copyright &copy; Agenzia Immobiliare</small>
+      </div>
+    </div>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+
+    <!-- Portfolio Modals -->
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
+
+      <div class="portfolio-modal-dialog bg-white">
+
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Proprietari</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/portfolio/proprietario.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Immobili</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/portfolio/immobile.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <div><a href="#">Query 1</a>
+              </div>
+              <div><a href="#">Query 1</a>
+              </div>
+              <div><a href="#">Query 1</a>
+              </div>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-3">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Agenzia Immobiliare</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/portfolio/agenziaimmobiliare.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 4 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-4">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/portfolio/game.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 5 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-5">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/portfolio/safe.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 6 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-6">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/portfolio/submarine.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.min.js"></script>
+
+  </body>
+
+</html>
